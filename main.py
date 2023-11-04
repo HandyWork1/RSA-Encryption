@@ -50,7 +50,8 @@ def main():
     a = int(input("Enter lower bound of the interval: "))
     b = int(input("Enter upper bound of the interval: "))
     msg = int(input("Enter message for encryption: "))
-
+    # Calling prime number generator function
+    n = p_numbers(a, b)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
