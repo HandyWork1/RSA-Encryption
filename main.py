@@ -27,6 +27,23 @@ def phi(n):
             result += 1
     return result
 
+# Public key
+def public_key(n, m):
+    phi_n = phi(n)
+    e = random.choice([e for e in range(2, phi_n) if math.gcd(e, phi_n) == 1])
+    c = pow(m, e, n)
+    return e, n, c
+
+# Private Key
+def private_key(c, e, n):
+    phi_n = phi(n)
+    for k in range(1, phi_n):
+        if (k * e) % phi_n == 1:
+            d = k
+            break
+    m = pow(c, d, n)
+    return d, n, m
+
 def main():
     # Taking parameters for selecting prime numbers
     # Taking message as a numerical value for encryption
