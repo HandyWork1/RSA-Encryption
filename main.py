@@ -52,6 +52,12 @@ def main():
     msg = int(input("Enter message for encryption: "))
     # Calling prime number generator function
     n = p_numbers(a, b)
+    #Calling Public and Private key functions
+    e, n, c = public_key(n, msg)
+    d, n, m = private_key(c, e, n)
+    # Displaying the Encrypted and Decrypted Message
+    print("After encryption, the ciphertext is:", c)
+    print("After decryption, the plaintext is:", m)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
