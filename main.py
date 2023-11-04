@@ -18,7 +18,7 @@ def p_numbers(a, b):
     # Select 2 prime numbers randomly from the range
     p, q = random.sample(prime_list, 2)
     n = p * q
-    return n
+    return n, prime_list
 # A simple method to evaluate Euler's Totient Function
 def phi(n):
     result = 1
