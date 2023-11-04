@@ -19,7 +19,14 @@ class MyTestCase(unittest.TestCase):
 
         n, prime_list_50_60 = p_numbers(50, 60)
         self.assertEqual(len(prime_list_50_60), 2)  # There are 2 prime numbers in the range [50, 60]
-
+    def test_public_key_function(self):
+        # Test case for public_key() function
+        n = 91  # Assuming n is 91
+        m = 5  # Assuming message m is 5
+        e, n, c = public_key(n, m)
+        self.assertIsInstance(e, int)  # e should be an integer
+        self.assertGreater(e, 1)  # e should be greater than 1
+        self.assertGreater(n, 1)  # n should be greater than 1
 
 
 if __name__ == '__main__':
