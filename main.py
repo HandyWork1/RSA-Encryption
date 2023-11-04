@@ -1,3 +1,6 @@
+import random
+import math
+
 # A simple method to evaluate Euler's Totient Function
 def phi(n):
     result = 1
